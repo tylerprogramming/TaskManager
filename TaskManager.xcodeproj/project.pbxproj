@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2F9445D928FF7A3D00C88A86 /* CustomTabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9445D828FF7A3D00C88A86 /* CustomTabBarView.swift */; };
+		2F9445DB28FF8CA500C88A86 /* CustomTabBarContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9445DA28FF8CA500C88A86 /* CustomTabBarContainerView.swift */; };
+		2F9445DD28FF92D200C88A86 /* TabBarItemsPreferenceKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9445DC28FF92D200C88A86 /* TabBarItemsPreferenceKey.swift */; };
+		2F9445DF29006A6900C88A86 /* TabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9445DE29006A6900C88A86 /* TabBarItem.swift */; };
 		2FFAFC6328FA18A800575B03 /* TaskManagerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FFAFC6228FA18A800575B03 /* TaskManagerApp.swift */; };
 		2FFAFC6528FA18A800575B03 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FFAFC6428FA18A800575B03 /* ContentView.swift */; };
 		2FFAFC6728FA18AA00575B03 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2FFAFC6628FA18AA00575B03 /* Assets.xcassets */; };
@@ -19,6 +23,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2F9445D828FF7A3D00C88A86 /* CustomTabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarView.swift; sourceTree = "<group>"; };
+		2F9445DA28FF8CA500C88A86 /* CustomTabBarContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarContainerView.swift; sourceTree = "<group>"; };
+		2F9445DC28FF92D200C88A86 /* TabBarItemsPreferenceKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarItemsPreferenceKey.swift; sourceTree = "<group>"; };
+		2F9445DE29006A6900C88A86 /* TabBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarItem.swift; sourceTree = "<group>"; };
 		2FFAFC5F28FA18A800575B03 /* TaskManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TaskManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2FFAFC6228FA18A800575B03 /* TaskManagerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskManagerApp.swift; sourceTree = "<group>"; };
 		2FFAFC6428FA18A800575B03 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -70,6 +78,10 @@
 				2FFAFC6D28FA18AA00575B03 /* TaskManager.xcdatamodeld */,
 				2FFAFC6828FA18AA00575B03 /* Preview Content */,
 				2FFAFC7728FC9E3F00575B03 /* AddTaskView.swift */,
+				2F9445D828FF7A3D00C88A86 /* CustomTabBarView.swift */,
+				2F9445DA28FF8CA500C88A86 /* CustomTabBarContainerView.swift */,
+				2F9445DC28FF92D200C88A86 /* TabBarItemsPreferenceKey.swift */,
+				2F9445DE29006A6900C88A86 /* TabBarItem.swift */,
 			);
 			path = TaskManager;
 			sourceTree = "<group>";
@@ -155,10 +167,14 @@
 				2FFAFC6C28FA18AA00575B03 /* Persistence.swift in Sources */,
 				2FFAFC7A28FCA05C00575B03 /* TaskViewModel.swift in Sources */,
 				2FFAFC6528FA18A800575B03 /* ContentView.swift in Sources */,
+				2F9445D928FF7A3D00C88A86 /* CustomTabBarView.swift in Sources */,
+				2F9445DF29006A6900C88A86 /* TabBarItem.swift in Sources */,
+				2F9445DB28FF8CA500C88A86 /* CustomTabBarContainerView.swift in Sources */,
 				2FFAFC6F28FA18AA00575B03 /* TaskManager.xcdatamodeld in Sources */,
 				2FFAFC7828FC9E3F00575B03 /* AddTaskView.swift in Sources */,
 				2FFAFC6328FA18A800575B03 /* TaskManagerApp.swift in Sources */,
 				2FFAFC7628FA19DA00575B03 /* EditTaskView.swift in Sources */,
+				2F9445DD28FF92D200C88A86 /* TabBarItemsPreferenceKey.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

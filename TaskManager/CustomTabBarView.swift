@@ -21,8 +21,12 @@ struct CustomTabBarView: View {
                     }
             }
         }
-        .padding(6)
-        .background(Color.white.ignoresSafeArea(edges: .bottom))
+        .background(Color.black.ignoresSafeArea(edges: .bottom))
+        .clipShape(
+            Capsule()
+        )
+        .padding(.vertical, 5)
+        .padding(.horizontal, 50)
     }
     
     private func switchToTab(tab: TabBarItem) {
@@ -36,14 +40,11 @@ extension CustomTabBarView {
     private func tabView(tab: TabBarItem) -> some View {
         VStack {
             Image(systemName: tab.iconName)
-                .font(.subheadline)
-            Text(tab.title)
-                .font(.callout)
+                .font(.title)
+
         }
-        .foregroundColor(selection == tab ? tab.color : .gray)
+        .foregroundColor(selection == tab ? tab.color : .white)
         .padding(.vertical, 8)
         .frame(maxWidth: .infinity)
-        .background(selection == tab ? tab.color.opacity(0.2) : .clear)
-        .cornerRadius(10)
     }
 }

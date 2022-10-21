@@ -11,9 +11,13 @@ import CoreData
 struct ContentView: View {
     @ObservedObject var taskModel: TaskViewModel
     
+    let data = (1...100).map { "Item \($0)" }
+    
     @State private var showingAddTask = false
     @State private var selection: TabBarItem = .home
-
+    
+    @State var rows: [GridItem]
+    
     var body: some View {
         NavigationStack {
             CustomTabBarContainerView(selection: $selection) {
@@ -25,41 +29,24 @@ struct ContentView: View {
                     .tabBarItem(tab: .profile, selection: $selection)
             }
         }
-        .navigationDestination(for: Task.self) { task in
-            TaskRow(task: task, taskModel: taskModel)
-        }
     }
     
     private func home() -> some View {
         NavigationStack {
-            List {
-                ForEach(taskModel.savedTasks) { task in
-                    NavigationLink(task.title ?? "", value: task)
+            ScrollView(taskModel.savedTasks.isEmpty ? .init() : .vertical, showsIndicators: false) {
+                VStack(spacing: 15) {
+                    ForEach(taskModel.savedTasks) { task in
+                        NavigationLink {
+                            TaskDetailView(task: task, taskModel: taskModel)
+                        } label: {
+                            HabitCardView(task: task)
+                                .foregroundColor(.black)
+                                .padding(.horizontal, 10)
+                        }
+                    }
                 }
             }
-            .navigationTitle("Tasks")
-            .navigationDestination(for: Task.self) { task in
-                TaskRow(task: task, taskModel: taskModel)
-            }
-        }
-    }
-}
-
-struct TaskRow: View {
-    let task: Task
-    @ObservedObject var taskModel: TaskViewModel
-    
-    var body: some View {
-        VStack {
-            Text(task.title ?? "")
-                .font(.title)
-                .navigationTitle(task.title ?? "")
-            
-            Button {
-                taskModel.deleteTask(task: task)
-            } label: {
-                Text("Delete?")
-            }
+            .navigationTitle("Habits")
         }
     }
 }
@@ -71,8 +58,8 @@ private let itemFormatter: DateFormatter = {
     return formatter
 }()
 
-struct Previews_ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView(taskModel: TaskViewModel())
-    }
-}
+//struct Previews_ContentView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ContentView(taskModel: TaskViewModel())
+//    }
+//}
